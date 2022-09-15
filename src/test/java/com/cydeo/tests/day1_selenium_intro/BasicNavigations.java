@@ -24,6 +24,13 @@ public class BasicNavigations {
         // navigate().to() method is loading to url in browser.
         driver.navigate().to("https://www.tesla.com");
 
+        String currentTitle = driver.getTitle();
+        System.out.println("currentTitle = " + currentTitle);
+
+        //System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
+        String currentURL = driver.getCurrentUrl();
+        System.out.println("currentURL = " + currentURL);
+
         // stops execution of code for 3 sec.
         Thread.sleep(3000);
 
@@ -39,14 +46,13 @@ public class BasicNavigations {
         driver.navigate().refresh();
 
 
-
         driver.navigate().to("https://www.google.com");
         //System.out.println("driver.getTitle() = " + driver.getTitle());
-        String currentTitle = driver.getTitle();
-        System.out.println("title = " + currentTitle);
+        currentTitle = driver.getTitle();
+        System.out.println("currentTitle = " + currentTitle);
 
         //System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
-        String currentURL = driver.getCurrentUrl();
+        currentURL = driver.getCurrentUrl();
         System.out.println("currentURL = " + currentURL);
 
 
