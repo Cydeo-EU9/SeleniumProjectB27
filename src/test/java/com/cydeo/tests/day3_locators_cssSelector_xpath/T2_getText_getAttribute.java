@@ -46,9 +46,15 @@ public class T2_getText_getAttribute {
 
         //5- Verify “forgot password” href attribute’s value contains expected:
         //Expected: forgot_password=yes
+        String expectedInHref = "forgot_password=yes";
+        String actualInHref = forgotPasswordLink.getAttribute("href");
 
+        if(actualInHref.contains(expectedInHref)){
+            System.out.println("Href attribute value verification passed!");
+        }else{
+            System.out.println("Href attribute value verification failed!");
+        }
 
-
-
+        driver.quit();
     }
 }
