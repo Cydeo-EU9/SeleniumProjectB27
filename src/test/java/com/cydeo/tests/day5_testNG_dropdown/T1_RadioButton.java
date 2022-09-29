@@ -32,13 +32,15 @@ public class T1_RadioButton {
              System.out.println("Hockey button is not Selected!");
          }
 
+
          // Test all sport radio buttons if they are clickable
         List<WebElement> sportRadioBtns = driver.findElements(By.xpath("//input[@name='sport']"));
 
         for (WebElement eachSport : sportRadioBtns) {
             eachSport.click();
             if(eachSport.isSelected()){
-                System.out.println(eachSport.getAttribute("id") + "Radio button is selected");
+                System.out.println(eachSport.getAttribute("id") + " Radio button is selected");
+
             }
 
             Thread.sleep(3000);
