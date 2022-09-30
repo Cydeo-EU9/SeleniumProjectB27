@@ -34,6 +34,10 @@ public class T1_Alert_Practice {
         //4. Click to OK button from the alert
         // To handle JS alerts we have to use Alert for switching driver to alert form
         Alert alert = driver.switchTo().alert();
+
+        // If you want to get the text of alert window you can use getText()
+        System.out.println("alert.getText() = " + alert.getText());
+
         // accept() method will click OK button
         alert.accept();
 
