@@ -59,6 +59,28 @@ public class DropdownPractices {
 
     }
 
+    @Test
+    public void dropdownTask7() throws InterruptedException {
+        Select selectLanguage = new Select(driver.findElement(By.xpath("//select[@name='Languages']")));
+
+//        3. Select all the options from multiple select dropdown.
+        //        4. Print out all selected values.
+        for (WebElement eachLanguage : selectLanguage.getOptions()) {
+            eachLanguage.click();
+            System.out.println("eachLanguage.getText() = " + eachLanguage.getText());
+            Thread.sleep(3000);
+        }
+
+        Thread.sleep(3000);
+
+//        5. Deselect all values.
+        selectLanguage.deselectAll();
+
+
+
+
+    }
+
 
 
 
