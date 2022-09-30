@@ -25,6 +25,22 @@ public class DropdownPractices {
     public void dropdownTask4(){
 
 
+
+//        3. Select Illinois using visible text
+
+
+//        4. Select Virginia using value
+
+
+//        5. Select California using index
+
+
+//        6. Verify final selected option is California.
+
+
+//        Use all Select options. (visible text, value, index)
+
+
     }
 
 
