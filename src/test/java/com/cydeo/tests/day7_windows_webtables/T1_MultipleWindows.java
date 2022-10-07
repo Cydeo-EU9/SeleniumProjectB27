@@ -59,11 +59,11 @@ public class T1_MultipleWindows {
 
         //7. Assert: Title is “Cydeo
 
-//        actualTitle = driver.getTitle();
-//        expectedTitle = "Cydeo";
-//        Assert.assertEquals(actualTitle,expectedTitle);
+        actualTitle = driver.getTitle();
+        expectedTitle = "Cydeo";
+        Assert.assertEquals(actualTitle,expectedTitle);
 
-        Assert.assertEquals(driver.getTitle(),"Cydeo");
+       // Assert.assertEquals(driver.getTitle(),"Cydeo");
 
     }
 
