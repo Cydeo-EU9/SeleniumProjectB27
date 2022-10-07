@@ -2,6 +2,7 @@ package com.cydeo.tests.day7_windows_webtables;
 
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -40,4 +41,9 @@ public class T1_MultipleWindows {
         //7. Assert: Title is “Cydeo
     }
 
+    @AfterMethod
+    public void tearDown(){
+        //driver.close();
+        //driver.quit();
+    }
 }
