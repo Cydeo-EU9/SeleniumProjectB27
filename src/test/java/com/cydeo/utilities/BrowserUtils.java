@@ -1,5 +1,7 @@
 package com.cydeo.utilities;
 
+import org.openqa.selenium.WebDriver;
+
 public class BrowserUtils {
     //Methods are static. Because we do not want to create an object to call those methods.
     // We just want to call those methods with class name. That is why they are static type
@@ -29,7 +31,9 @@ public class BrowserUtils {
     //• Return type: void
     //• Arg1: WebDriver
     //• Arg2: String expectedTitle
-    public static void verifyTitle(){
+    public static void verifyTitle(WebDriver driver,String expectedTitle){
+
+
 
     }
 }
