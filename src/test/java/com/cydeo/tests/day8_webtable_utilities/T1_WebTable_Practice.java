@@ -54,6 +54,7 @@ public class T1_WebTable_Practice extends TestBase {
 
     @Test
     public void test2(){
+        driver.get("https://practice.cydeo.com/web-tables");
         String customerOrderDate1 = WebTableUtils.returnOrderDate(driver,"Alexandra Gray");
         System.out.println("customerOrderDate1 = " + customerOrderDate1);
 
@@ -61,7 +62,7 @@ public class T1_WebTable_Practice extends TestBase {
 
     @Test
     public void test3(){
-
+        driver.get("https://practice.cydeo.com/web-tables");
      WebTableUtils.orderVerify(driver,"Ned Stark","05/12/2021");
 
     }
