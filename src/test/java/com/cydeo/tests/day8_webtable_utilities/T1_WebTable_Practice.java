@@ -64,6 +64,7 @@ public class T1_WebTable_Practice {
     @Test
     public void test3(){
 
+     WebTableUtils.orderVerify(driver,"Ned Stark","05/12/2021");
 
     }
 
