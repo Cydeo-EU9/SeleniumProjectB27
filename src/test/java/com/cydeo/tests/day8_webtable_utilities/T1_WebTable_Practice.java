@@ -68,7 +68,6 @@ public class T1_WebTable_Practice {
 
     }
 
-                                   COME BACK AT 12:20 EST
 
     @AfterMethod
     public void tearDown(){
