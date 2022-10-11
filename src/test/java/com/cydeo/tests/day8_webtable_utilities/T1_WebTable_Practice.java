@@ -63,6 +63,8 @@ public class T1_WebTable_Practice {
 
 
 
+
+
     @AfterMethod
     public void tearDown(){
         driver.quit();
