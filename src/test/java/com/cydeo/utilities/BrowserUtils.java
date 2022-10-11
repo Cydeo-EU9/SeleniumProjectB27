@@ -1,6 +1,7 @@
 package com.cydeo.utilities;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 public class BrowserUtils {
     //Methods are static. Because we do not want to create an object to call those methods.
@@ -31,9 +32,14 @@ public class BrowserUtils {
     //• Return type: void
     //• Arg1: WebDriver
     //• Arg2: String expectedTitle
+    // BrowserUtils.verifyTitle(driver,"Google")
     public static void verifyTitle(WebDriver driver,String expectedTitle){
 
+        String actualTitle = driver.getTitle();
 
+        Assert.assertEquals(actualTitle,expectedTitle);
 
     }
+
+
 }
