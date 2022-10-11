@@ -1,6 +1,7 @@
 package com.cydeo.tests.day8_webtable_utilities;
 
 import com.cydeo.utilities.WebDriverFactory;
+import com.cydeo.utilities.WebTableUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -52,6 +53,15 @@ public class T1_WebTable_Practice {
 
 
     }
+
+    @Test
+    public void test2(){
+        String customerOrderDate1 = WebTableUtils.returnOrderDate(driver,"Alexandra Gray");
+        System.out.println("customerOrderDate1 = " + customerOrderDate1);
+
+    }
+
+
 
     @AfterMethod
     public void tearDown(){
