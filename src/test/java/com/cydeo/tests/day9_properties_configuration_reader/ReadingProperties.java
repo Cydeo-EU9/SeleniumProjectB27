@@ -3,12 +3,13 @@ package com.cydeo.tests.day9_properties_configuration_reader;
 import org.testng.annotations.Test;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Properties;
 
 public class ReadingProperties {
 
     @Test
-    public void reading_from_properties_file_test(){
+    public void reading_from_properties_file_test() throws IOException {
 
         // 1- Create the object of Properties class
         // We need properties class to use methods coming from class like load(), getProperty("key")
@@ -21,6 +22,8 @@ public class ReadingProperties {
         // 3- Load the properties object using FileInputStream object
         // Load "properties" object with the "file" we opened using FileInputStream
         properties.load(file);
+
+
 
 
     }
