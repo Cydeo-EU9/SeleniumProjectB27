@@ -23,8 +23,8 @@ public class ReadingProperties {
         // Load "properties" object with the "file" we opened using FileInputStream
         properties.load(file);
 
-
-
+        System.out.println("properties.getProperty(\"browser\") = " + properties.getProperty("browser"));
+        System.out.println("properties.getProperty(\"env\") = " + properties.getProperty("env"));
 
     }
 }
