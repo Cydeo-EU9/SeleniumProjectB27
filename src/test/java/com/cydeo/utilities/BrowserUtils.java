@@ -17,7 +17,6 @@ public class BrowserUtils {
     public static void sleep(int seconds){
          // 1 second = 1000 millis
         // millis = seconds*1000
-
          try {
              Thread.sleep(seconds*1000);
          }catch(InterruptedException e){
