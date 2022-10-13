@@ -4,6 +4,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+// This class is only 1 time we are creating in utilities package
+// you will just call getProperty method with this class name
 public class ConfigurationReader {
 
     // 1- Create the object of Properties class
