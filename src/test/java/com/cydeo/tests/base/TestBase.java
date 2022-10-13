@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
 
+// This class is the parent of all Test classes
 public abstract class TestBase {
 
     protected WebDriver driver;
