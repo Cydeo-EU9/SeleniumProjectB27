@@ -1,6 +1,7 @@
 package com.cydeo.tests.day9_properties_configuration_reader;
 
 import com.cydeo.tests.base.TestBase;
+import com.cydeo.utilities.BrowserUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -27,7 +28,7 @@ public class T1_CRM_Login extends TestBase {
 
 //        6. Verify title is as expected:
 //        Expected: Portal
-
+        BrowserUtils.verifyTitle(driver,"Portal");
 
     }
 }
