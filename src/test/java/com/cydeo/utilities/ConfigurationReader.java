@@ -6,6 +6,7 @@ import java.util.Properties;
 
 // This class is only 1 time we are creating in utilities package
 // you will just call getProperty method with this class name
+// The purpose of this class is reading configuration.properties file
 public class ConfigurationReader {
 
     // 1- Create the object of Properties class
