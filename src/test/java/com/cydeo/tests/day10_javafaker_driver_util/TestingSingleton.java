@@ -22,4 +22,6 @@ public class TestingSingleton {
          String str4 = Singleton.getWord();
          System.out.println("str4 = " + str4);
      }
+
+
 }
