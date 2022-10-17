@@ -1,5 +1,6 @@
 package com.cydeo.tests.day11_upload_actions_javascriptexecutor;
 
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -32,7 +33,10 @@ public class T2_Guru99_Upload_Test {
         String expectedMsg = "1 file\nhas been successfully uploaded.";
         String actualMsg = resultMsg.getText();
 
+        BrowserUtils.sleep(3);
+
         Assert.assertEquals(actualMsg,expectedMsg);
+
 
     }
 }
