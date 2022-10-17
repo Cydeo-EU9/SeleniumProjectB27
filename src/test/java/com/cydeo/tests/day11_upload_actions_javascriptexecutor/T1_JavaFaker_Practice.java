@@ -5,7 +5,10 @@ import com.cydeo.utilities.Driver;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class T1_JavaFaker_Practice {
 
@@ -33,9 +36,7 @@ public class T1_JavaFaker_Practice {
          String userName = faker.name().username().replace(".","");
          username.sendKeys(userName);
 
-
 //        6. Enter email address  :    email.sendKeys(faker.internet().emailAddress())
-
 
 //        7. Enter password    :      faker.internet().password()
 
@@ -44,13 +45,18 @@ public class T1_JavaFaker_Practice {
 
 
 //        9. Select a gender from radio buttons
+        List<WebElement> genders = Driver.getDriver().findElements(By.xpath("//input[@type='radio']"));
+        genders.get(faker.number().numberBetween(0,2)).click();
 
 
 //        10. Enter date of birth
+         WebElement dateOfBirth = Driver.getDriver().findElement(By.xpath("//input[@name='birthday']"));
+         dateOfBirth.sendKeys("10/03/1980");
 
 
 //        11. Select Department/Office
-
+           Select departmentDropdown = new Select(Driver.getDriver().findElement(By.xpath("//select[@name='department']")));
+           departmentDropdown.selectByIndex(faker.number().numberBetween(1,9));
 
 //        12. Select Job Title
 
@@ -63,5 +69,6 @@ public class T1_JavaFaker_Practice {
 
 //        15. Verify success message “You’ve successfully completed registration.” is
 //        displayed.
+
     }
 }
