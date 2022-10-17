@@ -1,6 +1,5 @@
 package com.cydeo.utilities;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class BrowserUtils {
@@ -32,9 +31,10 @@ public class BrowserUtils {
     //• Arg1: WebDriver
     //• Arg2: String expectedTitle
     // BrowserUtils.verifyTitle(driver,"Google")
-    public static void verifyTitle(WebDriver driver,String expectedTitle){
+    public static void verifyTitle(String expectedTitle){
+     // driver --> Driver.getDriver()
 
-        String actualTitle = driver.getTitle();
+        String actualTitle = Driver.getDriver().getTitle();
 
         Assert.assertEquals(actualTitle,expectedTitle);
 

@@ -57,5 +57,11 @@ public class Driver {
     }
 
 
+    public static void closeDriver(){
+        if(driver!=null) {
+            driver.quit(); // this line will kill the session. value will noy be null
+            driver = null;
+        }
+    }
 
 }
