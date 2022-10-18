@@ -15,26 +15,26 @@ public class T1_Circle_Drag_and_Drop {
 //        1. Go to https://demos.telerik.com/kendo-ui/dragdrop/index
         Driver.getDriver().get("https://demos.telerik.com/kendo-ui/dragdrop/index");
 
-        // Locate both small and big circles
-        WebElement smallCircle = Driver.getDriver().findElement(By.id("draggable"));
-        WebElement bigCircle = Driver.getDriver().findElement(By.id("droptarget"));
-
         // Click Accept cookies button to not have any issue in our test
         WebElement acceptCookies = Driver.getDriver().findElement(By.id("onetrust-accept-btn-handler"));
         acceptCookies.click();
+
+        // Locate both small and big circles
+        WebElement smallCircle = Driver.getDriver().findElement(By.id("draggable"));
+        WebElement bigCircle = Driver.getDriver().findElement(By.id("droptarget"));
 
         // Create Actions object
         Actions actions = new Actions(Driver.getDriver());
 
 //        2. Drag and drop the small circle to bigger circle.
-        actions.dragAndDrop(smallCircle,bigCircle).perform();
+       // actions.dragAndDrop(smallCircle,bigCircle).perform();
 
-//        actions.clickAndHold(smallCircle)
-//                .pause(2000)
-//                .moveToElement(bigCircle)
-//                .pause(2000)
-//                .release()
-//                .perform();
+        actions.clickAndHold(smallCircle)
+                .pause(2000)
+                .moveToElement(bigCircle)
+                .pause(2000)
+                .release()
+                .perform();
 
 
 //        3. Assert:
