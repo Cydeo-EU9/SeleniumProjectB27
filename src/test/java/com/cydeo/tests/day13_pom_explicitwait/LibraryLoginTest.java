@@ -3,17 +3,18 @@ package com.cydeo.tests.day13_pom_explicitwait;
 import com.cydeo.pages.LibraryLoginPage;
 import com.cydeo.utilities.Driver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class LibraryLoginTest {
 
-    LibraryLoginPage libraryLoginPage = new LibraryLoginPage();
+    LibraryLoginPage libraryLoginPage;
 
     @BeforeMethod
     public void setUp(){
         Driver.getDriver().get("https://library1.cydeo.com");
-        //LibraryLoginPage libraryLoginPage = new LibraryLoginPage();
+        libraryLoginPage = new LibraryLoginPage();
     }
 
 
@@ -61,10 +62,24 @@ public class LibraryLoginTest {
 
         //3- Enter incorrect username or incorrect password
         //LibraryLoginPage libraryLoginPage = new LibraryLoginPage();
-
+        libraryLoginPage.inputUsername.sendKeys("wrong@email.com");
+        libraryLoginPage.inputPassword.sendKeys("wrongpassword");
+        libraryLoginPage.signInButton.click();
 
         //4- Verify title expected error is displayed:
         //Expected: Sorry, Wrong Email or Password
+        Assert.assertTrue(libraryLoginPage.wrongEmailAndPasswordErrorMsg.isDisplayed());
 
     }
+
+
+
+
+
+
+    @AfterMethod
+    public void tearDown(){
+        Driver.closeDriver();
+    }
+
 }
