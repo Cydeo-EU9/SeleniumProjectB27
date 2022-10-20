@@ -7,7 +7,15 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LibraryLoginPage {
 
+
     public LibraryLoginPage(){
+        /*
+        PageFactory class is a Selenium class that support POM
+        It has method called initElements. Once it's called it will store all elements specified using @FindBy
+        annotation with locator and it wll give elements to the classes when they called
+        initElements method accept 2 arg
+        WebDriver instance and Page class instance (this) means current instance of this class
+         */
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
