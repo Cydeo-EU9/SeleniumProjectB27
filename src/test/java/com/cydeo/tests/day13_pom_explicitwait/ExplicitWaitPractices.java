@@ -44,18 +44,19 @@ public class ExplicitWaitPractices {
         wait.until(ExpectedConditions.invisibilityOf(dynamicallyLoadedPage1.loadingBar));
 
         //4. Assert username inputbox is displayed
-
+        Assert.assertTrue(dynamicallyLoadedPage1.inputUsername.isDisplayed());
 
         //5. Enter username: tomsmith
-
+        dynamicallyLoadedPage1.inputUsername.sendKeys("tomsmith");
 
         //6. Enter password: incorrectpassword
-
+        dynamicallyLoadedPage1.inputPassword.sendKeys("somethingwrong");
 
         //7. Click to Submit button
-
+        dynamicallyLoadedPage1.submitButton.click();
 
         //8. Assert “Your password is invalid!” text is displayed.
+        Assert.assertTrue(dynamicallyLoadedPage1.errorMessage.isDisplayed());
 
     }
 }
