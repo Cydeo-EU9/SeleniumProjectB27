@@ -1,6 +1,7 @@
 package com.cydeo.utilities;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 public class BrowserUtils {
@@ -40,5 +41,10 @@ public class BrowserUtils {
 
     }
 
+
+    public static void waitForInvisibilityOf(WebElement element){
+
+
+    }
 
 }
