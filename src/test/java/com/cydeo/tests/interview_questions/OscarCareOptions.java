@@ -7,8 +7,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.Set;
-
 public class OscarCareOptions {
 
 
@@ -18,8 +16,6 @@ public class OscarCareOptions {
         Driver.getDriver().get("https://www.hioscar.com/care-options");
 
         Driver.getDriver().findElement(By.xpath("//span[.='Search network']")).click();
-
-        Set<String> allWindowHandles = Driver.getDriver().getWindowHandles();
 
         Driver.getDriver().findElement(By.xpath("//div[@class='Dropdown_visibleContent__NGHUm']")).click();
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
