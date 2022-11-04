@@ -21,10 +21,6 @@ public class OscarCareOptions {
 
         Set<String> allWindowHandles = Driver.getDriver().getWindowHandles();
 
-        for(String each: allWindowHandles){
-            Driver.getDriver().switchTo().window(each);
-        }
-
         Driver.getDriver().findElement(By.xpath("//div[@class='Dropdown_visibleContent__NGHUm']")).click();
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
         wait.until(ExpectedConditions.elementToBeClickable( Driver.getDriver().findElement(By.xpath("//li[@id='20232023']"))));
